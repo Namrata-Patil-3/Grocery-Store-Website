@@ -1,0 +1,150 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+   <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 31%;
+            height: 100px;
+            margin-right: 0px;
+        }
+        .style2
+        {
+            color: #FFFFFF;
+            height: 88px;
+            font-size: xx-large;
+            background-color: #0066FF;
+            width: 1659px;
+        }
+        .style3
+        {
+            width: 1659px;
+        }
+        .style5
+        {
+            font-size: larger;
+        }
+        </style>
+</head>
+<body style="height: 579px; width: 1401px;">
+    <form id="form1" runat="server">
+    <div style="height: 1168px">
+        <table class="style1">
+            <tr>
+                <td class="style2">
+                    &nbsp;&nbsp;<strong>&nbsp;&nbsp;&nbsp;
+                    <asp:Label ID="Label2" runat="server" Font-Bold="True" 
+                        Font-Names="Berlin Sans FB" Font-Size="XX-Large" style="font-size: xx-large" 
+                        Text="GROCERY STORE"></asp:Label>
+                    <span 
+                        class="style5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+                                        
+                    </strong>
+                    
+                    <asp:Button ID="Button1" runat="server" PostBackUrl="~/Login.aspx" 
+                        style="text-align:left; color: #FFFFFF; font-weight: 700; font-size: medium; background-color: #000099; font-family: 'Bahnschrift SemiBold';" 
+                        Text="Login" BorderStyle="None" Height="30px" Width="89px" 
+                        Font-Names="Bahnschrift SemiBold"/>
+                    <strong> 
+                    <asp:Button ID="Button2" runat="server" BorderStyle="None" Height="30px" 
+                        style="color: #FFFFFF; font-weight: 700; font-size: medium; background-color: #000099" 
+                        Text="LogOut" Width="89px" Font-Names="Bahnschrift SemiBold" 
+                        onclick="Button2_Click" />
+&nbsp;</strong><asp:ImageButton ID="ImageButton3" runat="server" CausesValidation="False" 
+                        Height="33px" ImageUrl="~/image/cart.jpg" Width="48px" 
+                        onclick="ImageButton3_Click" />
+                </td>
+            </tr>
+            <tr>
+                <td style="font-size: xx-large" class="style3" bgcolor="#009933">
+                    
+                    
+        <asp:Menu ID="Menu2" runat="server" Orientation="Horizontal" 
+            RenderingMode="Table" 
+            
+                        style="text-align: center; font-weight: 700; font-size: x-large; margin-top: 0px; background-color: #009933; color: #FFFFFF; margin-bottom: 0px;" 
+                        Width="160px" Height="45px" StaticSubMenuIndent="8px" BackColor="#003366" 
+                        DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" 
+                        ForeColor="White" onmenuitemclick="Menu2_MenuItemClick">
+            <DynamicHoverStyle BackColor="#009933" ForeColor="White" BorderColor="#009933" 
+                BorderStyle="Outset" />
+            <DynamicMenuItemStyle BackColor="#009933" HorizontalPadding="5px" 
+                VerticalPadding="2px" />
+            <DynamicMenuStyle BackColor="#B5C7DE" />
+            <DynamicSelectedStyle BackColor="#507CD1" />
+            <Items>
+                <asp:MenuItem Text="Home" Value="Home">
+                    <asp:MenuItem Text="Vegetables" Value="Vegetables" 
+                        NavigateUrl="~/Vegetable.aspx"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/Fruits2.aspx" Selected="True" Text="Fruits" 
+                        Value="Fruits"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/Milkdairy.aspx" Text="Dairy Product" 
+                        Value="Dairy Product"></asp:MenuItem>
+                    <asp:MenuItem Text="Staples" Value="Staples" NavigateUrl="~/Staples.aspx"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem Text="Beauty" Value="Beauty" NavigateUrl="~/Beauty.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="Kitchen" Value="Cart" NavigateUrl="~/Kitchen.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="Other Product" Value="Other Product" 
+                    NavigateUrl="~/Otherproducts.aspx">
+                </asp:MenuItem>
+            </Items>
+            <LevelSubMenuStyles>
+                <asp:SubMenuStyle BackColor="#009933" BorderColor="#009933" BorderStyle="Inset" 
+                    Font-Underline="False" />
+                <asp:SubMenuStyle BackColor="#009933" BorderColor="#009933" 
+                    Font-Underline="False" />
+                <asp:SubMenuStyle BackColor="#009933" BorderColor="#009933" 
+                    Font-Underline="False" />
+                <asp:SubMenuStyle BackColor="#009933" Font-Underline="False" />
+            </LevelSubMenuStyles>
+            <StaticHoverStyle BorderColor="#009933" BorderStyle="Outset" Height="40px" 
+                BackColor="#009933" ForeColor="White" />
+            <StaticMenuItemStyle Height="10px" Width="338px" ForeColor="White" 
+                Font-Bold="True" Font-Size="Large" HorizontalPadding="5px" 
+                VerticalPadding="2px" />
+            <StaticMenuStyle Height="20px" Width="100px" BackColor="Black" />
+            <StaticSelectedStyle BackColor="#33CC33" BorderColor="#FFFF66" 
+                BorderStyle="Outset" ForeColor="#99FF99" Height="40px" />
+        </asp:Menu>
+                    
+                    
+                </td>
+            </tr>
+        </table>
+
+        
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    <p>
+                        <br />
+                    </p>
+                    <p>
+                        &nbsp;</p>
+                    <p>
+                    </p>
+                    <p>
+                        &nbsp;</p>
+                    <p>
+                    </p>
+                    <p>
+                    </p>
+                    </asp:ContentPlaceHolder>
+                    
+        <br />
+        
+       
+        
+    </div>
+    
+    </form>
+</body>
+</html>
+
